@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+    
+    
+{% block head %}
+<title>Housing Reviews| Log in</title>
+
+{% endblock %}
+
+{% block body %}
+
+    <!-------------------------------Nav Bar Bootstrap-->
+    <nav  class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#">Irish Housing Reviews    </a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item active">
+              
+              <!--  <a class="nav-link" href="/login">Log in</a> -->
+              <a class="nav-link" id="myBtn">Log in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search Eircode" aria-label="Search">
+            <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+
+    <!-----------------------------Main-->
+    
+    <main>
+                       
+                    <h1 id="h1-home">Log in</h1>
+ 
+                    <div class="contact-form-inner">
+
+						<form id="contact-form" method="get" >
+								<!-- "../index.html" -->
+									
+										<input type="text"  id="firstname" name="firstname" placeholder="First Name"><br>
+										
+
+										<input type="text"  id="lastname" name="lastname" placeholder="Last Name"><br>
+																										
+
+										<input type="email"  id="email" name="email" placeholder="Email"><br>
+											
+
+										<textarea name="description" class="required" id="description" placeholder="How can we help"></textarea><br>
+											
+																
+										<input type="submit" value="Submit" class="bold-white">
+
+										<br>
+
+										
+						</form>
+						
+					
+				
+				
+						<div class="find-us" >
+						<p>You can also find us in our premises</p>
+						</div>
+
+						<div id="map-link">
+						<a href="https://www.google.com.ar/maps/place/Galway,+H91+WDX2,+Ireland/@53.2676538,-9.0644773,15z/data=!3m1!4b1!4m5!3m4!1s0x485b96fc651c0d43:0xe1de16a65f5e1f7d!8m2!3d53.2676547!4d-9.0557225" target="_blank"><img src="../assets/images/map.jpg" alt="Gillian's B&B location in Galway H91 WDX2" id="map"/></a>
+						</div>
+					</div>
+
+    </main>
+
+
+    {% block modal %}
+<!-- Adapted from bootstap https://getbootstrap.com/docs/4.0/components/modal/#modal-components   -->
+<div class="modal" id="login_popup" tabindex="-1" role="dialog">
+    <div class="modal-dialog" role="document">
+      <div class="modal-content">
+       <div >
+         <!--  <h5 class="modal-title">**</h5>-->
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+    
+        <div class="modal-body">
+          <p>Do you have an User ID?</p>
+        </div>
+        <div class="modal-footer">
+          <!--<button type="button" class="btn btn-primary">Yes, I want to log in</button>-->
+          <a href="someUrl" data-dismiss="modal" class="btn btn-primary btn-block">Yes, I want to log in</a>
+          <a href="/" data-dismiss="modal" class="btn btn-primary btn-block">No, I want to Register</a>
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">No, I want to Register</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{% endblock%}
+
+{% block script %}
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#myBtn").click(function(){
+        $("#login_popup").modal()
+    });
+});
+
+</script>
+
+{% endblock%}
+    
+{% endblock %}

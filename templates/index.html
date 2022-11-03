@@ -1,0 +1,203 @@
+{% extends 'base.html' %}
+    
+    
+{% block head %}
+<title>Housing Reviews| Home</title>
+
+{% endblock %}
+
+{% block body %}
+
+    <!-------------------------------Nav Bar Bootstrap-->
+    <nav  class="navbar navbar-expand-lg navbar-light bg-light">
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+          <a class="navbar-brand" href="#">Irish Housing Reviews    </a>
+          <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+            <li class="nav-item active">
+              <a class="nav-link" href="/">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+             <!--  <a class="nav-link" href="/login">Log in</a> -->
+              <a class="nav-link" id="myBtn">Log in</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">About</a>
+            </li>
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Search Eircode" aria-label="Search">
+            <button class="btn btn-light my-2 my-sm-0" type="submit">Search</button>
+          </form>
+        </div>
+      </nav>
+    <!-------------------------------Nav Bar
+    
+                <header class="fixed-header">
+    
+                    <div class="inner-split-30">
+    
+                        <div class="logo">
+                            <p class=logo1>Housing Reviews</p>
+                            <p class=logo2>Dublin, Ireland</p>
+                        </div>
+                    </div>
+    
+                    <div class="inner-split-70">
+    
+                        <div class="narrow-menu-outer">
+                        <div class="narrow-menu">
+                            <span id="narrow-menu-title"><i class="fas fa-bars"></i></span>
+                
+                                <ul class="nav-bar">
+    
+                                        <li id="active" class="nav-buttons">Home</li>
+                                    
+                                    <a href="login/index.html">
+                                        <li class="nav-buttons">Log in/ Register</li>
+                                    </a>
+    
+    
+                                    <a href="about/index.html">
+                                        <li class="nav-buttons">About us</li>
+                                    </a>
+    
+                                    <a href="contact/index.html">
+                                        <li class="nav-buttons">Contact</li>
+                                    </a>
+    
+                                </ul>
+                        </div>
+                        </div>
+                    </div>			
+    
+                    <div class="inner-split-70">
+    
+                        <ul class="nav-bar hide-nav">
+    
+                            <li id="active" class="nav-buttons">Home</li>
+    
+                            <a href="login/index.html">
+                                <li class="nav-buttons">Log in/ Register</li>
+                            </a>
+    
+    
+                            <a href="about/index.html">
+                                <li class="nav-buttons">About</li>
+                            </a>
+    
+                            <a href="contact/index.html">
+                                <li class="nav-buttons">Contact</li>
+                            </a>
+    
+    
+                        </ul>
+    
+                        <input type="text" placeholder="Search by EirCode..">
+                    </div>
+                </header>
+    -->
+    
+    <!-----------------------------Main-->
+    
+    <main>
+                 
+                    <h1 id="h1-home">Housing Reviews- Dublin, Ireland</h1>
+
+                        <table>
+                            <tr>
+                               <!-- <th>EirCode</th>-->
+                               <th>Review</th>  
+                                <th>Date</th>
+                              
+                              <!--  <th>Landlord</th> --> 
+                                <th>Actions</th>
+    
+                            </tr>
+                            {% for review in reviews %}
+                            <tr>
+                               <!-- <td>{{ review.content }}</td>  -->
+                                <td>{{review.review_text}}</td>
+                                <td>{{review.review_time.date()}}</td>
+                               
+                                <td>
+                                        <a href="">Reply</a>
+                                </td>
+    
+                            </tr>
+                            {% endfor %}
+                        </table>
+                    
+                        <form action="/" method="POST">
+                            <input type="text" name="review_text" id="review_text" value="Write your review">
+                            
+                            <input type="submit" value="Add Review">
+                        </form>
+     
+    </main>
+    
+
+    {% block modal %}
+    <!-- Adapted from bootstap https://getbootstrap.com/docs/4.0/components/modal/#modal-components 
+    and   https://www.w3schools.com/Bootstrap/tryit.asp?filename=trybs_ref_js_modal2&stacked=h-->
+    <div class="modal" id="login_popup" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+           <div >
+              <button class="x_close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <h5 class="header_popup">Log In</h5>
+            </div>
+        
+            <div class="form_popup">
+                <form role="form">
+                    <div class="form-group">
+                      <label for="usrname"><span class="glyphicon glyphicon-user"></span> Username</label>
+                      <input type="text" class="form-control" id="usrname" placeholder="Enter email">
+                    </div>
+                    <div class="form-group">
+                      <label for="psw"><span class="glyphicon glyphicon-eye-open"></span> Password</label>
+                      <input type="text" class="form-control" id="psw" placeholder="Enter password">
+                    </div>
+                    <div class="checkbox">
+                      <label><input type="checkbox" value="" checked> Remember me</label>
+                    </div>
+                      <button type="submit" class="login_btn"><span class="glyphicon glyphicon-off"></span> Login</button>
+                  </form>
+            </div>
+
+
+            
+            <div class="footer_popup">
+                
+                <p>Don't have an account? <a href="/register">Register</a></p>
+                <p>Forgot <a href="#">Password?</a></p>
+
+              <!--<button type="button" class="btn btn-primary">Yes, I want to log in</button>
+              <a href= "/login" class="btn btn-primary btn-block">Yes, I want to log in</a>
+              <a href="/register" class="btn btn-secondary">No, I want to Register</a>
+             < <button type="button" class="btn btn-secondary" data-dismiss="modal">No, I want to Register</button> -->
+            
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    {% endblock%}
+    {% block script %}
+
+    <script type="text/javascript">
+    $(document).ready(function(){
+        $("#myBtn").click(function(){
+            $("#login_popup").modal()
+        });
+    });
+
+    </script>
+
+    {% endblock%}
+    
+{% endblock %}

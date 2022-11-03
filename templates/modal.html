@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block modal %}
+    <!-- Adapted from bootstap https://getbootstrap.com/docs/4.0/components/modal/#modal-components   -->
+    <div class="modal" id="login_popup" tabindex="-1" role="dialog">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+           <div >
+             <!--  <h5 class="modal-title">**</h5>-->
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        
+            <div class="modal-body">
+              <p>Do you have an User ID?</p>
+            </div>
+            <div class="modal-footer">
+              <!--<button type="button" class="btn btn-primary">Yes, I want to log in</button>-->
+              <a href= "/login" class="btn btn-primary btn-block">Yes, I want to log in</a>
+              <a href="/register" class="btn btn-secondary">No, I want to Register</a>
+             <!--< <button type="button" class="btn btn-secondary" data-dismiss="modal">No, I want to Register</button> -->
+            </div>
+          </div>
+        </div>
+      </div>
+    
+    {% endblock%}
+
+    
+{% block script %}
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $("#login_popup").modal("show")
+})
+
+</script>
+
+{% endblock%}
