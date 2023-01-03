@@ -9,6 +9,7 @@
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
 
+
 <!--Nav narrow-->
 
         <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -20,7 +21,8 @@
 	    <link href="https://fonts.googleapis.com/css2?family=Hind+Siliguri&family=Lobster&family=Playfair+Display+SC:ital,wght@1,700&display=swap" rel="stylesheet" type="'text/css">
 <!--Icons-->
 
-		<script src="https://kit.fontawesome.com/18e93a7dc5.js" crossorigin="anonymous"></script>
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
 <!-- Social Media -->
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -35,29 +37,35 @@
 	
 	</head>
 
-    <div class="wrapper">
+    
 
     
-	    <body>
-        {% block body %}{% endblock %}
+	<body>
 
+        <div id="container" class="d-flex flex-column min-vh-100">
+            <div id="wrapper">
+            {% block body %}{% endblock %}
+            </div>
 
-        {% block modal %}{% endblock%}
-
-        </body>
-
+     
+            {% block modal %}{% endblock%}
+     
     <!--Footer-->
-            <footer >
-                <div class=footer-inner>
+            <footer id=footer >
+                <div >
                     <span class="bold">&copy; IrishHousingReviews</span>
+                </div>
+
+                <div>
+               <!--       <a href="https://www.flaticon.com/free-icons/pint" title="pint icons">All of our icons are cortesy of flaticon</a> -->
                 </div>
             </footer>
 
 
-    </div>
+        </div>
 
    
-
+    </body>
 
     <!--
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -72,6 +80,8 @@
     <!-- JavaScript plugins-->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
 
-    {% block script %}{% endblock%} 
+    
+    {% block script %}{% endblock%}
+
     
 </html>

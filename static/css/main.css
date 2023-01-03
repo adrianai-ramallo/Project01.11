@@ -1,4 +1,3 @@
-
 /************************************************Clear fix*/
 
 *{margin: 0}
@@ -14,34 +13,48 @@ strong{
 
 /*General*/
 
+#header{
+	color: #fff;
+	font-weight: 400;
+	background-color: #aa3904;
+	
 
-html, body{
-	height: 100%;
 }
 
+#small_col{
+	width: 10%;
+
+}
+
+#container{
+	position: relative;
+	min-height: 100vh;
+}
+
+#wrapper{
+	padding-bottom: 5rem;
+	
+}
+
+#footer{
+	position:relative;
+	bottom:0;
+	width:100%;
+	height:5rem;
+	
+
+}
 
 main{
-
-	/*
-	background-color: rgb(241, 129, 172);
-	padding: 50px,50px, 50px, 50px;
-    */
-	float: left;
-	padding: 15px;
-	min-width: 100%;
-	background-color: rgb(245, 140, 140);
-
-
-
-
+	padding : 5px 30px;
 }
 
-
-.reviews_Table{
+#reviews{
 		float: left;
 		width: 100%;
 		height: auto;
-		margin: 200px 20px 0px 20px;
+		margin-top: 30px;
+		
 		}
 
 
@@ -52,537 +65,88 @@ main{
 
 .bold-white{
 	color: #fff;
-	font-weight: 900;
+	font-weight: 400;
 }
 
-#wrapper{
-	float: left;
-	width: 100%;
-	height: 100%;
-	padding-bottom: 30px;
-	box-sizing: border-box;
-}
-
-
-/*****************************************************Splits*/
-
-/*
-.inner-split-three{
-			float: left;
-			width:  33.33%;
-			height: auto;
-			
-			/*display: inline-block;*/
-			/*margin: 20px 40px;*/
-		/*	padding:  0px 50px;
-		}
-
-.inner-split-two{
-			float: left;
-			width:  50%;
-			height: auto;
-			
-			/*display: inline-block;*/
-			/*margin: 20px 40px;*/
-			/*padding:  0px 50px;
-}
+/*******************************************Index Page*/
 
 
 
-.inner-split-70{
-			float: left;
-			width:  70%;
-			height: auto;
-			
-			/*display: inline-block;*/
-			/*margin: 20px 40px;*/
-			/*padding:  0px 50px;
-	
-}
-
-.inner-split-30{
-			float: left;
-			width:  auto;
-			height: auto;*/
-			
-			/*display: inline-block;*/
-			/*margin: 20px 40px;*/
-			/*padding:  0px 50px;
+#index-logo{
+	display: flex;
 
 }
-*/
 
-
-
-
-
-
-
-/************************************************NAV bar
-
-ul.nav-bar {
-	float: right;
-	height: auto;
-	margin-right: 0px;
-	background: #FF5733;
+#logo{
+	width: 50px;
+	max-width: 100%;
+	height: 50px;
+	margin-right: 30px;
 }
 
-li.nav-buttons{
-	display: inline;
-	list-style-type: none;
-	border-radius: 100px;
-	float: left;
-	width: 100px;
-	height: 60px;
-	margin: 10px 10px 10px 10px;
-	font-size: 18px;
+#index-top{
+	padding-top: 30px;
+	float:left;
+}
+
+#index-form{
+	padding: 120px 20px;
+}
+
+#or{
+
+	padding: 30px;
 	text-align: center;
-	padding: 10px;
-	font-family: 'Lobster', cursive;
 }
 
-.narrow-menu-outer{
-	float: left;
-	width: 100%;
-	height: auto;
-}
-.narrow-menu{
-	display: none;
-	height: auto;
-	width: 100%;
-	margin: 0 auto;
-}
-
-/*NAV Bar- Toogle Bar*/
-/*
-@media only screen and (max-width: 1000px){
-	.narrow-menu{
-		display: block;
-	}
-	ul.nav-bar{
-		margin: 0;
-		width: 100%;
-		display: none;
-	}
-	li.nav-buttons{
-		width: 100%;
-		margin-left: 0;
-	}
-	span#narrow-menu-title{
-		text-align: right;
-		float: left;
-		width: 100%;
-		height: 50px;
-		padding-top: 10px;
-		font-size: 18px;
-		padding-top: 17px;
-		padding-right: 30px;
-		font-weight: bolder;
-		box-sizing: border-box;
-		cursor: pointer;
-	}
-	.hide-nav{
-		display: none;
-	}
-}
-
-*/
-
-/**********************************Click on NAV bar stauses*/
-
-/*
-li#active{
-	background: #f2e394;
-	margin-left: 5px;
-	color: black;
-	font-weight: 900px;
-	font-size: 20px;
-	padding: 15px;
+#wrapper {
+	display:block;
 	
-}
-
-a:link li.nav-buttons{
-	color: #fff;
-	background: red;
-	background: #e28743;
-
-}
-a:visited li.nav-buttons{
-	color: #fff;
-	background: #f2ae72;
-
-}
-a:hover li.nav-buttons{
-	color: #fff;
-	background: #f2e394;
-	font-size: 20px;
+	padding:30px;
 
 }
 
-*/
-
-/*a:active li.nav-buttons{
-	background: #f2e394;
-	margin-left: 5px;
-	color: black;
-	font-weight: 900px;
-	font-size: 20px;
-	padding: 15px;
-
-}*/
-
-/*******************************Before Footer*/
-/*
-#h4-home{
-	float: left;
-
-	font-size: 14px;
-	text-align:  center;
-
-	width: 100%;
-	height: auto;
-	font-family: 'Hind Siliguri', sans-serif;
-	margin-bottom:auto;
-
-  background:#629c8c;
-  padding: 30px;
-
-
-} */
-/*
-#tandc{
-
-text-decoration: underline;
-}
-
-/*****************************************Footer*/
-/*
-		footer{
-		   /*float: left;
-			width: 100%;
-			
-
-			height: 120px;
-			background: rgb(31,42,55);
-			margin-top: -120px;
-			color: #fff;
-			/*text-align: center;
-		}*/
-
-		#footer-name{
-		font-family: 'Playfair Display SC', serif;
-		font-weight: 400px;
-		}
-
-		
-		.footer{
-			float: left;
-			width: 100%;
-			padding: 15px;
-			height :120px;
-			min-width: 100%;
-			background:  rgb(0, 13, 26);
-			display: inline-block;
-		}
-
-		
-		.footer-inner{
-			float: left;
-			width:  25%;
-			height: 100%;
-			display: block;
-			margin: 20px 50px 10px 60px;
-		}
-
-		/*
-		#contact{
-
-		width: 30px;
-		margin-top: 5px;
-		margin-left: 60px;
-		
-		}
-
-
-
-
-	/**********************Social Media*/
-			.fa{
-			  padding: 6px;
-			  font-size: 20px;
-			  width: 30px;
-			  height: 30px;
-			  text-align: center;
-			  text-decoration: none;
-			  border-radius: 50%;
-			  margin-top: -10px;
-			  margin-left: 60px;
-			 }
-
-			.fa:hover {
-			    opacity: 0.7;
-			}
-
-			.fa-facebook {
-			  background: #3B5998;
-			  color: white;
-			}
-			
-
-/*Home*/
-
-/*
-
-.next-prev .previous {
-  position: absolute;
-  z-index: 10;
-  font-size: 25px;
-  top: 40%;
-  left: 10px;
-  font-weight: 700;
-}
-
-.next-prev .next {
-  right: 10px;
-  position: absolute;
-  font-size: 25px;
-  z-index: 10;
-  top: 40%;
-}
-*/
-/*
-
-.next-prev .next .previous {
-  background: rgba(255, 255, 255, 0.55);
-  cursor: pointer;
-  border-radius: 50%;
-  width: 30px;
-  height: 30px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 5px;
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.4);
-}
-.next-prev .next .previous:hover {
-  background: white;
-}
-
-.container-home-pictures{
-margin-top: 20px;
-  transition: all 0.3s ease;
-
-}
-
-*/
-
-.home-pic{
-	float: left;
-	width: 100%;
-	height: 100%;
-	margin-top: -280px;
-	/*padding: -200px 0px;*/
-	/*border: 10px solid slategray;*/
-  
-	
-	
-	
-}
-
-.inner-home-pic{
-	float: left;
-
-	margin: 0px, 10px, 5px;
-
-}
-
-h1{
-	float: left;
-	font-size: 25px;
-	color: grey;
-	width: 100%;
-	height: 40px;
-	font-family: 'Playfair Display SC', serif;
-	margin: 10px;
-
-}
-
-#h1-contact{
-	float: left;
-	width: 100%;
-	height: 20px;	
-	font-size: 25px;
-	color:dimgrey;
-	font-family: 'Playfair Display SC', serif;
-	margin-bottom: 40px;
-
-}
-
-
-
-#h1-home1{
-		margin: 40px 10px;
-
-}
-
-#h2-contact{
-	float: left;
-	font-size: 25px;
-	text-align:  center;
-	color: #000;
-	width: 100%;
-	height: 20px;
-	/*margin-top: -100px;*/
-	margin-bottom: 40px;
-	font-family: 'Playfair Display SC', serif;
-}
-
-#h2-home{
-	float: left;
-	font-size: 25px;
-	text-align:  center;	
-	color: grey;
-	width: 100%;
-	height: auto;
-	font-family: 'Playfair Display SC', serif;
-	margin: 30px -10px;
-}
-
-#h3-home{
-	float: left;
-
-	font-size: 20px;
-	text-align:  center;
-	width: 100%;
-	height: auto;
-	font-family: 'Hind Siliguri', sans-serif;
-	margin: 100px 10px auto auto;
-
-
-}
-
-
-
-
-
-
-ul.rooms-features{
-	font-family: 'Hind Siliguri', sans-serif;
-	list-style: none;
-	padding: 5px;
-
-}
-
-
-
-ul.rooms-features li:before {
-  content: '✓';
-  margin: 0px 5px;
-}
-
-
-.container-rooms{
-	float: left;
-	width: 100%;
-	height: auto;
-	
-}
-
-#icons-rooms{
-margin: 50px 0px;
-}
-
-.icons-container{
-	width: 100%;
-
-	display: inline;
-	margin-top: 100px;
-
-}
-
-.icons{
-display: inline;
-
-margin: 50px;
-}
-
-
-
-.room-pic{
-	width: 100%;
-	height: 100%;
-	/*border: 10px solid slategray;*/
-
+@media (max-width: 700px) {
+	#responsive {   
+	  flex-direction: column;
 	}
 
-.container-breakfast{
-	float: left;
-	width: 100%;
-	height: 400px;
-	
+  }
 
-}
+/********************************************Register Page*/
 
-.breakfast-pic{
-	width: 70%;
-	height: 70%;
-	/*border: 10px solid slategray;*/
-
-	}
-
-	#section-breakfast{
-		margin: 30px 20px auto 20px;
-
-	}
-
-	#comments-icon{
-
-		float: left;
-		margin: 50px;
-	}
-
-/********************************************* CONTACT PAGE */
-
-		#map{
-			
-			width:  100%;
-			border: 1px solid black;
+		#register-btn{
+			width: calc(50% - 100px);
 			
 		}
 
 
-		#image-contact{
-			float: left;
-		/*	width: 100%;
-			height: 100%;*/
-			width: 2000px;
-			height: 300px;
-			object-fit: cover;		
+		.split{
+			float:left;
+			display: flex;
+			vertical-align: top;
+			flex-wrap:wrap;
+		}
+
+		.inside-split{
+			float:left;
+			margin: 30px;
 
 		}
 
-		.find-us{
-			font-weight: 900;
-			font-family: 'Hind Siliguri', sans-serif;
-			text-align: center;
 
+		#terms-and-conditions{
+			padding: 20px;
+			width: 40%;
 		}
-
-		#how-to-location{
-
-			margin-left: -150px;
-			font-family: 'Hind Siliguri', sans-serif;
-		}
-
-
-/********************************************Form*/
 
 	
-		.contact-form-inner{
-			width: 380px;
+		#contact-form-inner{
+			width: calc(50% - 60px);
 			height: auto;
 			margin: 0 auto;
 			padding: 25px;
+			padding: 30px;
 
 		}
 
@@ -607,7 +171,6 @@ margin: 50px;
 			border-radius: 5px;
 			resize: vertical;
 			font-family: 'Hind Siliguri', sans-serif;
-			
 		}
 
 			input[type=submit] {
@@ -618,7 +181,6 @@ margin: 50px;
 			border: none;
 			border-radius: 4px;
 			margin:  5px 0px 5px 0px;
-			
 			cursor: pointer;
 			font-family: 'Hind Siliguri', sans-serif;
 
@@ -634,110 +196,19 @@ margin: 50px;
 			background: #f2ae72;
 	}
 
+/*NavBar***************************************************/
 
+	#welcome{
+		padding: 10px 100px;
+		color:#6b035a;
+		float: right;
+	}
 
 /*About***************************************************/
 
-.outer-cert{
-	float: left;
-	width: 200px;
-	height: auto;
-	padding: 40px 40px;
-	
 
-}
-
-.inner-cert{
-	float: left;
-	width: 150%;
-	height: auto;	
-
-}
-
-.tripadvisor-cert-2018{
-	
-width: 100%;
-height: 100%;
-border-top-right-radius: 50%;
-border-top-left-radius: 50%;
-margin:25px;
-}
-
-
-.tripadvisor-cert-2019{
-	
-width: 120%;
-height: 120%;
-border-top-right-radius: 50%;
-border-top-left-radius: 50%;
-/*border-radius: */
-margin:20px;
-}
-
-.about-pics{
-	width: 50%;
-  height: 50%;
-
-}
-
-.about-sections{
-	float: left;
-	height: auto;
-	text-align: justify;
-  text-justify: inter-word;
-  margin: 30px 0px;
-  font-size: 16px ;
-}
-
-#highlighted{
-	font-weight: 900;
-	font-size: 20px ;
-}
-
-/*Pictures Location*/
 
 /*
-.pictures-container{
-float: left;
-width: 100%;
-height: 400px;
-box-sizing: border-box ;
-}
-*/
-
-
-.pictures-inner{
-float: left;
-width:  100%;
-height: 100%;
-
-margin: 30px;
-
-}
-
-
-.location-pics{
-
-	width:  100%;
-	height:  100%;
-	margin: 0 auto;
-	
-
-}
-
-
-
- /*
-.container-relative{
-  position: relative;
-  /*width: 50%;
-  max-width: 300px;
-		}
-*/
-
-
-
-
 
 @media only screen and (max-width: 1000px){
 	.location-pics, .room-pic, .home-pic, .breakfast-pic  {
@@ -762,14 +233,7 @@ margin: 30px;
 	}
 }
 
-@media only screen and (max-width: 800px){
-	#icons-rooms, #rooms-extras, #section-breakfast{
-		
-		max-width: 100%;
-		margin: 20px -0px 20px 0px;
 
-	}
-}
 
 @media only screen and (max-width: 800px){
 	.footer-inner{
@@ -866,7 +330,7 @@ table{
   }
 
 
-  .login_btn {
+  .main-btn {
 	float:center;
 	padding: 8px 20%;
 	font-size: 16px;
@@ -880,14 +344,14 @@ table{
 	box-shadow: 0 7px #999;
   }
   
-  .login_btn:hover {
+  .main-btn:hover {
 		background-color: #3e638e;
 		border: none;
 		outline: none;
 	
 	}
   
-  .login_btn:active {
+  .main-btn:active {
 	background-color: #3e8e45;
 	box-shadow: 0 5px #666;
 	/*W3The translate() method moves an element from its current position (according to the parameters given for the X-axis and the Y-axis). */
@@ -897,9 +361,55 @@ table{
   }
 
   /*Fix for Chrome*/
-  .login_btn:focus {
+  .main-btn:focus {
 
 	outline: none;
 	border: none;
   }
+
+
+
+  /*Ratings   idea from https://codepen.io/sidbelbase/pen/RwGZRbL*/
+
+  .rate-area {
+	float: left;
+	border-style: none;
+}
+
+.rate-area:not(:checked) > input {
+	position: absolute;
+	top: -9999px;
+	clip: rect(0, 0, 0, 0);
+}
+
+.rate-area:not(:checked) > label {
+	float: right;
+	width: 0.8em;
+	overflow: hidden;
+	white-space: nowrap;
+	cursor: pointer;
+	font-size: 180%;
+	color: lightgrey;
+}
+
+.rate-area:not(:checked) > label:before {
+	content: "★";
+}
+
+.rate-area > input:checked ~ label {
+	color: gold;
+}
+
+.rate-area:not(:checked) > label:hover,
+.rate-area:not(:checked) > label:hover ~ label {
+	color: gold;
+}
+
+.rate-area > input:checked + label:hover,
+.rate-area > input:checked + label:hover ~ label,
+.rate-area > input:checked ~ label:hover,
+.rate-area > input:checked ~ label:hover ~ label,
+.rate-area > label:hover ~ input:checked ~ label {
+	color: gold;
+}
   

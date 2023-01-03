@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block head %}
-<title>Housing Reviews| Register</title>
+<title>Housing Reviews| My Account</title>
 {% endblock %}
 
 {% block body %}
@@ -17,11 +17,14 @@
             <li class="nav-item ">
               <a class="nav-link" href="/">Home </a>
             </li>
+            <li class="nav-item active">
+                <a class="nav-link" href="/account">My Account</a>
+            </li>
             <li class="nav-item">
                 <a class="nav-link" id="myBtn">Log in</a>
             </li>
-            <li class="nav-item active">
-              <a class="nav-link" href="/register">Register</a>
+            <li class="nav-item">
+              <a class="nav-link" href="./register">Register</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="./review">Post</a>
@@ -51,31 +54,7 @@
           </div>
 
 
-            <form action="/register" method="POST" id="contact-form-inner" >
-                <!-- "../index.html" -->
-                  
-
-                    <input type="text"  id="email_address" name="email_address" placeholder="Email"><br>
-                    
-                    <br>
-                    <input type="text"  id="password" name="password" placeholder="Password"><br>
-                                          
-                    <br>
-                    <div class="checkbox">
-                      <label><input type="checkbox" value=""> Landlord</label>
-                    </div>              
-
-                    <div class="checkbox">
-                      <label><input type="checkbox" value=""> I agree with the terms and conditions</label>
-                    </div>   
-                   <button type="submit" class="main-btn"><a id="register-btn">Register</a></button>
-
-                   <!--  <input type="submit" value="Register" id="register-btn" class="btn">-->
-                    <br>
-    
-            </form>
-
-            <form action="{{ request.path }}" method="POST" class="...">
+            <form action="{{ request.path }}" method="POST" id="contact-form-inner">
     
               {{ form.csrf_token }}
                   
@@ -91,8 +70,8 @@
               {% endif %}
               {% endwith %}
               
-              {% if request.path == '/register' %}
-              {{ form.username(class_="form-control",placeholder="Username")}}
+              {% if request.path == '/account' %}
+              {{ form.username(type="text", class_="form-control",placeholder="Username")}}
                   
               {% for error in form.username.errors %}
               {{ error }}
@@ -100,48 +79,40 @@
                   
               {% endif%}
                   
-              {{ form.email(class_="form-control",placeholder="Email")}}
-                  
+              {{ form.email(type=email, class_="form-control",placeholder="Email")}}
+              
               {% for error in form.email.errors %}
               {{ error }}
               {% endfor%}
                   
-              {{ form.pwd(class_="form-control",placeholder="Password")}}
+              {{ form.pwd(type="text", class_="form-control",placeholder="Password")}}
               
               {% for error in form.pwd.errors %}
               {{ error }}
               {% endfor%}
                   
-              {% if request.path == '/register' %}
-              {{ form.cpwd(class_="form-control",placeholder="Confirm Password")}}
-                  
+              {% if request.path == '/account' %}
+              {{ form.cpwd(type="text", class_="form-control",placeholder="Confirm Password")}}
+              
               {% for error in form.cpwd.errors %}
               {{ error }}
               {% endfor%}
                   
               {% endif%}
                   
-              <button type="submit" class="btn btn-block btn-primary mb-3">
+              <button type="submit" class="main-btn"><a id="register-btn">Submit</a>
               {{ btn_action }}
               </button>
                   
               <p>
-              {% if request.path != '/register' %}
-              New here?
+              {% if request.path != '/account' %}
+              <br>New here?
               <a href="{{url_for('register')}}">Create account</a>
               {% else %}
-              Already have an account?
+              <br>Already have an account?
               <a href="{{url_for('login')}}">Login</a>
               {% endif %}
               </p>
-
-
-
-
-
-
-          </div>
-
 
         </div>
 
@@ -149,7 +120,8 @@
       </main>
 
 
-      
+
+  
 
 
 {% endblock %}
